@@ -1,4 +1,4 @@
-import { Schema, models } from "mongoose";
+import { Schema, models, model } from "mongoose";
 export interface useerTypes extends Document {
   clerkId: string;
   email: string;
@@ -20,3 +20,4 @@ const userSchema = new Schema({
   creditBalance: { type: Number, required: true },
 });
 const User = models?.User || model("User", userSchema);
+export default User;
