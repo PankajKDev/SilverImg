@@ -10,10 +10,9 @@ import { handleError } from "../utils";
 export async function createUser(user: CreateUserParams) {
   try {
     await connectToDatabase();
-    //establish connection to database
 
     const newUser = await User.create(user);
-    //creates a new user
+
     return JSON.parse(JSON.stringify(newUser));
   } catch (error) {
     handleError(error);
@@ -24,11 +23,11 @@ export async function createUser(user: CreateUserParams) {
 export async function getUserById(userId: string) {
   try {
     await connectToDatabase();
-    //same as above
+
     const user = await User.findOne({ clerkId: userId });
-    //finds a user with findOne using clerkID
+
     if (!user) throw new Error("User not found");
-    //throws error
+
     return JSON.parse(JSON.stringify(user));
   } catch (error) {
     handleError(error);
@@ -43,7 +42,7 @@ export async function updateUser(clerkId: string, user: UpdateUserParams) {
     const updatedUser = await User.findOneAndUpdate({ clerkId }, user, {
       new: true,
     });
-    //updates user
+
     if (!updatedUser) throw new Error("User update failed");
 
     return JSON.parse(JSON.stringify(updatedUser));
@@ -66,9 +65,8 @@ export async function deleteUser(clerkId: string) {
 
     // Delete user
     const deletedUser = await User.findByIdAndDelete(userToDelete._id);
-    //deletes a user
     revalidatePath("/");
-    //revalidates path to /
+
     return deletedUser ? JSON.parse(JSON.stringify(deletedUser)) : null;
   } catch (error) {
     handleError(error);
@@ -85,7 +83,7 @@ export async function updateCredits(userId: string, creditFee: number) {
       { $inc: { creditBalance: creditFee } },
       { new: true }
     );
-    //updates credits based on user
+
     if (!updatedUserCredits) throw new Error("User credits update failed");
 
     return JSON.parse(JSON.stringify(updatedUserCredits));
