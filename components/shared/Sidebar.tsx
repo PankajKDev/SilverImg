@@ -73,7 +73,7 @@ const Sidebar = () => {
           </SignedIn>
           <SignedOut>
             <Button asChild className="button bg-purple-gradient bg-cover">
-              <Link href="/sign-up">Sign Up</Link>
+              <Link href="/sign-in">Login</Link>
             </Button>
             {/* asChild refers it will render its children as main Component instead of a button */}
           </SignedOut>
