@@ -6,6 +6,7 @@ import { handleError } from "../utils";
 import User from "../database/models/user.model";
 import Image from "../database/models/image.model";
 import { redirect } from "next/navigation";
+import { v2 as cloudinary } from "cloudinary";
 const populateUser = (query: any) =>
   query.populate({
     path: "author",
@@ -68,6 +69,29 @@ export async function getImageById(imageId: string) {
     await connectToDatabase();
     const image = await populateUser(Image.findById(imageId));
     if (!image) throw new Error("Image not found");
+  } catch (error) {
+    handleError(error);
+  }
+}
+
+//GET IMAGES
+export async function getAllImages({
+  limit = 9,
+  page = 1,
+  searchQuery = "",
+}: {
+  limit?: number;
+  page: number;
+  searchQuery?: string;
+}) {
+  try {
+    await connectToDatabase();
+    cloudinary.config({
+      cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+      api_key: process.env.CLOUDINARY_API_KEY,
+      api_secret: process.env.CLOUDINARY_API_SECRET,
+      secure: true,
+    });
   } catch (error) {
     handleError(error);
   }
