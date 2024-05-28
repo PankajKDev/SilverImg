@@ -71,7 +71,7 @@ const MobileNav = () => {
                       </li>
                     );
                   })}
-                  <div className="flex flex-col flex-center mt-3 w-full">
+                  <div className="flex flex-col flex-center mt-1 w-full">
                     <Link href="/privacy">
                       <p className="cursor-pointer text-purple-700 mr-2">
                         Privacy Policy
