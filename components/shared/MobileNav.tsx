@@ -94,18 +94,6 @@ const MobileNav = () => {
           </Button>
 
           {/* asChild refers it will render its children as main Component instead of a button */}
-          <div className="flex flex-col flex-center mt-5">
-            <Link href="/privacy">
-              <p className="cursor-pointer text-purple-700 mr-2">
-                Privacy Policy
-              </p>
-            </Link>
-            <Link href="/terms">
-              <p className="cursor-pointer text-purple-700 ">
-                Terms & Conditions
-              </p>
-            </Link>
-          </div>
         </SignedOut>
       </nav>
     </header>
