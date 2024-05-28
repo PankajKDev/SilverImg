@@ -70,12 +70,23 @@ const Sidebar = () => {
                 <UserButton afterSignOutUrl="/" showName />
               </li>
             </ul>
+            <div className="flex flex-center">
+              <Link href="/privacy">
+                <p className="cursor-pointer text-purple-700">Privacy Policy</p>
+              </Link>
+            </div>
           </SignedIn>
           <SignedOut>
             <Button asChild className="button bg-purple-gradient bg-cover">
               <Link href="/sign-in">Login</Link>
             </Button>
             {/* asChild refers it will render its children as main Component instead of a button */}
+
+            <div className="flex flex-center">
+              <Link href="/privacy">
+                <p className="cursor-pointer text-purple-700">Privacy Policy</p>
+              </Link>
+            </div>
           </SignedOut>
         </nav>
       </div>
