@@ -16,10 +16,9 @@ const Terms = () => {
         <section>
           <h2 className="text-xl font-semibold mb-2">Introduction</h2>
           <p>
-            Welcome to SilverIMG These Terms of Service ("Terms") govern your
-            use of the services offered by SilverIMG ("we" or "us"). By
-            accessing or using our Services, you agree to be bound by these
-            Terms.
+            Welcome to SilverIMG These Terms of Service govern your use of the
+            services offered by SilverIMG. By accessing or using our Services,
+            you agree to be bound by these Terms.
           </p>
         </section>
 
