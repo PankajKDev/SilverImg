@@ -101,6 +101,33 @@ const Terms = () => {
             future.
           </p>
         </section>
+        <section>
+          <h2 className="text-xl font-semibold mb-2">Refund Policy</h2>
+          <p>
+            If you are not satisfied with our services, you can contact us at
+            the email address provided below to opt for a refund. We will review
+            your request and provide a response within a reasonable timeframe.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold mb-2">Contact Information</h2>
+          <p>
+            If you have any questions or concerns regarding our refund policy,
+            please contact us at:
+          </p>
+          <ul className="list-disc pl-5 text-gray-700">
+            <li className="text-md text-gray-700 mb-2">
+              Email:{" "}
+              <a
+                href="mailto:pankajk.dev0000@gmail.com"
+                className="text-blue-600 underline hover:text-blue-500"
+              >
+                pankajk.dev0000@gmail.com
+              </a>
+            </li>
+          </ul>
+        </section>
       </main>
 
       <footer className="text-center p-5 mt-10 border-t border-purple-200">
