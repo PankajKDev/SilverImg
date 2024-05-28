@@ -18,7 +18,7 @@ const Privacy = () => {
           SilverIMG collects the following types of personal data:
         </p>
         <ul className="list-disc pl-5 text-gray-700">
-          <li className="text-md text-gray-700 mb-2">Username,email</li>
+          <li className="text-md text-gray-700 mb-2">Username, email</li>
           {/* Repeat for other items */}
         </ul>
         <p className="text-md text-gray-700 mb-4">
@@ -32,7 +32,7 @@ const Privacy = () => {
           {/* Repeat for other items */}
         </ul>
         <p className="text-md text-gray-700 mb-4">
-          SilverIMG do not closes its users's details to any third party
+          SilverIMG does not share its users&apos; details with any third party
         </p>
         <ul className="list-disc pl-5 text-gray-700">
           <li className="text-md text-gray-700 mb-2">
@@ -58,11 +58,11 @@ const Privacy = () => {
         </ul>
         <p className="text-md text-gray-700 mb-4">
           As an individual who created SilverIMG, I am committed to protecting
-          the privacy and security of user data. SilverIMG complies with India's
-          Digital Personal Data Protection Act, 2023 (DPDP Act) and other
-          relevant data protection laws. I ensure that SilverIMG's data
-          processing practices are transparent and that users have the right to
-          be informed about how their personal data is used
+          the privacy and security of user data. SilverIMG complies with
+          India&apos;s Digital Personal Data Protection Act, 2023 (DPDP Act) and
+          other relevant data protection laws. I ensure that SilverIMG&apos;s
+          data processing practices are transparent and that users have the
+          right to be informed about how their personal data is used
         </p>
         <p className="text-md text-gray-700 mb-4">
           SilverIMG takes the security of personal data seriously. We implement
